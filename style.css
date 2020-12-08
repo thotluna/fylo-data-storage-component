@@ -1,0 +1,267 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background: #0c122c url("images/bg-desktop.png") no-repeat 0 50vh;
+}
+
+@media (max-width: 375px) {
+  body {
+    background: #0c122c url("images/bg-mobile.png") no-repeat 0 0;
+  }
+}
+
+.center-childer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 60vw;
+  height: 25vh;
+  display: -ms-grid;
+  display: grid;
+  grid: repeat(4, 1fr), 2fr 3fr;
+  gap: 2rem;
+      grid-template-areas: "logo-box logo-box ... ... ..." "logo-box logo-box progress-box progress-box progress-box" "logo-box logo-box progress-box progress-box progress-box" "logo-box logo-box progress-box progress-box progress-box";
+}
+
+@media (max-width: 375px) {
+  .container {
+    height: 50vh;
+    width: 80vw;
+    grid: 4fr 3fr, 1fr;
+    gap: 1rem;
+        grid-template-areas: "logo-box" "logo-box" "logo-box" "logo-box" "progress-box" "progress-box" "progress-box";
+  }
+}
+
+.container > div {
+  background-color: #1d2c67;
+}
+
+.box-header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: logo-box;
+  border-radius: 1rem 7rem 1rem 1rem;
+  padding-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 375px) {
+  .box-header {
+    border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+  }
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.icons > div {
+  width: 3.325vw;
+  height: 3.325vw;
+  background-color: #0c122c;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 375px) {
+  .icons > div {
+    width: 12vw;
+    height: 12vw;
+  }
+}
+
+.folder-icon {
+  margin-left: 0.972vw;
+  margin-right: 0.972vw;
+}
+
+@media (max-width: 375px) {
+  .folder-icon {
+    margin-left: 4.5vw;
+    margin-right: 4.5vw;
+  }
+}
+
+.box-progress-bar {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: progress-box;
+  border-radius: 0.5rem;
+  color: #dddbff;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 375px) {
+  .box-progress-bar {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.box-progress-bar stronge {
+  font-weight: 700;
+}
+
+.border-progress {
+  width: 100%;
+  height: 1.5rem;
+  margin-top: 0.972vw;
+  margin-bottom: 0.77vw;
+  background-color: #0c122c;
+  border-radius: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.line-progress {
+  width: 70%;
+  height: 1rem;
+  margin-left: 0.3rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.point-progress {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.2rem;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.limit-progress {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.limit-progress > h5 {
+  display: inline;
+}
+
+.message {
+  width: 12rem;
+  height: 5rem;
+  position: fixed;
+  top: 20vw;
+  right: 22vw;
+  background-color: white;
+  border-radius: 1rem 1rem 0 1rem;
+  color: black;
+}
+
+@media (max-width: 375px) {
+  .message {
+    width: 9rem;
+    height: 4rem;
+    top: 113vw;
+    right: 31vw;
+    border-radius: 1rem;
+  }
+}
+
+.message::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-top: 30px solid white;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  bottom: -20px;
+}
+
+@media (max-width: 375px) {
+  .message::after {
+    border-left: 0;
+    border-top: 0;
+  }
+}
+
+.claro {
+  color: gray;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
